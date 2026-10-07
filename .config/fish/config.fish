@@ -31,3 +31,4 @@ if status is-interactive
         alias ssh 'kitten ssh'
     end
 end
+alias dot 'git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
