@@ -1,0 +1,8 @@
+google-chrome
+mpvpaper
+outlook-for-linux-bin
+python312
+slack-desktop
+teams-for-linux-bin
+upscayl-bin
+visual-studio-code-bin

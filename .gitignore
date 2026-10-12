@@ -23,6 +23,7 @@
 !/starship.toml
 !/mimeapps.list
 !/*-flags.conf
+!/pkglist*.txt
 
 *.bak
 *.bak-*
