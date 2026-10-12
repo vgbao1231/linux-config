@@ -156,7 +156,8 @@
             "memoryWarningThreshold": 95,
             "swapWarningThreshold": 85
         },
-        "screenList": [],
+        "screenList": [
+        ],
         "showBackground": true,
         "tooltips": {
             "clickToShow": false
@@ -226,16 +227,16 @@
         "height": 60,
         "hoverRegionHeight": 2,
         "hoverToReveal": true,
-        "ignoredAppRegexes": [],
+        "ignoredAppRegexes": [
+        ],
         "monochromeIcons": true,
         "pinnedApps": [
             "google-chrome",
             "com.microsoft.VSCode",
-            "kitty",
             "org.kde.dolphin",
-            "teams-for-linux",
             "slack",
-            "outlook-for-linux"
+            "outlook-for-linux",
+            "teams-for-linux"
         ],
         "pinnedOnStartup": false
     },
