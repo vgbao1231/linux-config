@@ -1,6 +1,7 @@
 # Whitelist: ignore everything, then allow only real configs
 /*
 !/.gitignore
+!/README.md
 !/hypr/
 !/quickshell/
 !/illogical-impulse/
