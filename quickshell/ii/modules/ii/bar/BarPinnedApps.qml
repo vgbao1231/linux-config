@@ -28,7 +28,14 @@ BarGroup {
             readonly property bool isRunning: modelData.toplevels.length > 0
             readonly property bool isActive: modelData.toplevels.some(t => t.activated)
             property int lastFocused: -1
-            property var desktopEntry: DesktopEntries.heuristicLookup(modelData.appId)
+            // Delegate được tái sử dụng khi đổi thứ tự app ghim (modelData đổi tại chỗ),
+            // nên desktopEntry phải là binding theo modelData.appId, không gán một lần
+            property int entriesRevision: 0
+            readonly property var desktopEntry: {
+                entriesRevision;
+                return DesktopEntries.heuristicLookup(modelData.appId);
+            }
+            onModelDataChanged: lastFocused = -1
 
             Layout.fillHeight: true
             implicitWidth: isSeparator ? 1 : appButton.implicitWidth
@@ -37,7 +44,7 @@ BarGroup {
             Connections {
                 target: DesktopEntries
                 function onApplicationsChanged() {
-                    appItem.desktopEntry = DesktopEntries.heuristicLookup(appItem.modelData.appId);
+                    appItem.entriesRevision++;
                 }
             }
 
